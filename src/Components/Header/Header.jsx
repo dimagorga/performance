@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Navigation from "../Navigation/Navigation";
 import s from "./Header.module.css";
 
 class Header extends Component {
@@ -57,19 +58,7 @@ class Header extends Component {
             </div>
           )}
         </div>
-        <nav className={s.nav}>
-          <ul className={s.menuList}>
-            <li className={s.menuItem}>
-              <a href="/">Направления</a>
-            </li>
-            <li className={s.menuItem}>
-              <a href="/">Преподаватели</a>
-            </li>
-            <li className={s.menuItem}>
-              <a href="/">Галерея</a>
-            </li>
-          </ul>
-        </nav>
+        <Navigation />
       </header>
     );
   }
