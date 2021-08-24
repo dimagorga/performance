@@ -1,0 +1,77 @@
+import { Component } from "react";
+import s from "./Header.module.css";
+
+class Header extends Component {
+  state = {
+    visible: false,
+  };
+
+  toggle = () => {
+    this.setState((prevState) => ({
+      visible: !prevState.visible,
+    }));
+  };
+
+  render() {
+    return (
+      <header className={s.header}>
+        <a className={s.logo} href="/">
+          Performance
+        </a>
+        <div className={s.mobileMenu}>
+          <button className={s.burger} onClick={this.toggle}>
+            =
+          </button>
+          {this.state.visible && (
+            <div className={s.mobileNav}>
+              <ul>
+                <li className={s.mobileListItem}>
+                  <a className={s.mobileListLink} href="/">
+                    Направления
+                  </a>
+                </li>
+                <li className={s.mobileListItem}>
+                  <a className={s.mobileListLink} href="/">
+                    Преподаватели
+                  </a>
+                </li>
+                <li className={s.mobileListItem}>
+                  <a className={s.mobileListLink} href="/">
+                    Галерея
+                  </a>
+                </li>
+                <ul className={s.contactList}>
+                  Контакты:
+                  <li>
+                    <a className={s.mobileListLink} href="/" tel="/">
+                      +375 33 904 44 24
+                    </a>
+                  </li>
+                  <li>
+                    <a className={s.mobileListLink} href="/" mail="/">
+                      performance_brest@gmail.com
+                    </a>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+          )}
+        </div>
+        <nav className={s.nav}>
+          <ul className={s.menuList}>
+            <li className={s.menuItem}>
+              <a href="/">Направления</a>
+            </li>
+            <li className={s.menuItem}>
+              <a href="/">Преподаватели</a>
+            </li>
+            <li className={s.menuItem}>
+              <a href="/">Галерея</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    );
+  }
+}
+export default Header;

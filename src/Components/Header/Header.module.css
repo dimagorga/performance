@@ -1,0 +1,71 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 320px;
+
+  padding: 20px;
+}
+
+.logo {
+  font-weight: 600;
+  color: rgb(41, 41, 41);
+  margin-right: 30px;
+}
+.nav {
+  display: none;
+}
+
+.burger {
+  display: block;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-width: 1px;
+  border-radius: 12%;
+}
+
+.mobileNav {
+  position: absolute;
+  width: 180px;
+  padding: 15px;
+  border-radius: 12%;
+  background-color: rgb(236, 238, 240);
+  right: 10px;
+  font-size: 16px;
+
+  text-align: center;
+  border: 1px solid rgb(204, 205, 206);
+  box-shadow: 7px 5px 5px rgb(114, 114, 114);
+}
+.mobileListLink {
+  color: rgb(41, 41, 41);
+}
+.contactList {
+  margin-top: 20px;
+  font-size: 12px;
+  text-align: start;
+}
+
+@media screen and (min-width: 468px) {
+  .header {
+    max-width: 1024px;
+  }
+
+  .mobileMenu {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    margin: 0px;
+  }
+
+  .nav {
+    display: block;
+    width: 330px;
+    margin-right: 20px;
+  }
+  .menuList {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+}
