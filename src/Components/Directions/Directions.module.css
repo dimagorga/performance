@@ -1,0 +1,53 @@
+.list {
+  background-color: #fff;
+  padding: 30px 10px 0 10px;
+}
+
+.item {
+  box-sizing: border-box;
+
+  min-width: 300px;
+  padding: 0 15px;
+  margin: 0 auto;
+  background-color: #ffeb09;
+  margin-bottom: 30px;
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+.title {
+  padding: 10px;
+}
+
+.image {
+  display: block;
+  box-sizing: border-box;
+  max-width: 265px;
+  object-fit: cover;
+  background-color: #fff;
+  margin: 10px auto;
+}
+
+.description {
+  font-size: 14px;
+  text-align: justify;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .item {
+    width: 768px;
+  }
+  .image {
+    max-width: 730px;
+    max-height: 500px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .image {
+    width: 740px;
+  }
+}

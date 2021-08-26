@@ -1,35 +1,42 @@
 .main {
-  height: 300px;
   text-align: center;
-  background-color: rgba(252, 248, 14, 0.719);
 }
 .mainTitle {
-  padding: 100px 0;
+  padding-top: 145px;
+  padding-bottom: 100px;
+  background-color: #ffeb09;
+  background-image: url("../../image/logotype_perfomance.png");
+  background-position: center;
+  background-position-y: 10px;
+  background-size: 200px;
+  background-repeat: no-repeat;
+  font-size: 10px;
+  font-weight: 800;
+  color: white;
 }
 
-@media screen and (min-width: 468px) {
-  .main {
-    height: 400px;
-  }
+@media screen and (min-width: 768px) {
   .mainTitle {
-    padding: 150px 0;
+    padding-top: 220px;
+    padding-bottom: 120px;
+    font-size: 15px;
+    background-position-y: 1px;
+    background-size: 330px;
   }
   h1 {
     font-size: 50px;
-  }
-  p {
-    font-size: 30px;
   }
 }
 
 @media screen and (min-width: 1023px) {
   .mainTitle {
-    padding: 120px 0;
+    padding-top: 240px;
+    padding-bottom: 150px;
+    background-position-y: -40px;
+    background-size: 430px;
+    font-size: 20px;
   }
   h1 {
     font-size: 60px;
-  }
-  p {
-    font-size: 40px;
   }
 }

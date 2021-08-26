@@ -25,17 +25,28 @@
 
 .mobileNav {
   position: absolute;
-  width: 180px;
+  width: 280px;
   padding: 15px;
-  border-radius: 12%;
+  border-radius: 3%;
   background-color: rgb(236, 238, 240);
-  right: 10px;
+  left: 50%;
   font-size: 16px;
-
+  transform: translateX(-50%);
   text-align: center;
   border: 1px solid rgb(204, 205, 206);
   box-shadow: 7px 5px 5px rgb(114, 114, 114);
 }
+.mobileListItem {
+  padding: 10px;
+
+  border: 1px solid rgb(184, 188, 190);
+  border-left: none;
+  border-right: none;
+}
+.mobileListItem:nth-child(2) {
+  border: none;
+}
+
 .mobileListLink {
   color: rgb(41, 41, 41);
 }
@@ -49,9 +60,12 @@
   text-align: start;
 }
 
-@media screen and (min-width: 468px) {
+@media screen and (min-width: 768px) {
   .header {
     max-width: 1024px;
+  }
+  .logo {
+    font-size: 20px;
   }
 
   .mobileMenu {

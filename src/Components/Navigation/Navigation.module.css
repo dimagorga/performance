@@ -1,10 +1,10 @@
 .nav {
   display: none;
 }
-@media screen and (min-width: 468px) {
+@media screen and (min-width: 768px) {
   .nav {
     display: block;
-    width: 330px;
+    width: 430px;
     margin-right: 20px;
   }
   .menuList {

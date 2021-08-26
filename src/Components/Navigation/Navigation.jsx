@@ -18,6 +18,11 @@ function Navigation() {
             Галерея
           </a>
         </li>
+        <li className={s.menuItem}>
+          <a className={s.navLink} href="/">
+            Контакты
+          </a>
+        </li>
       </ul>
     </nav>
   );
