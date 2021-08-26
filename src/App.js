@@ -3,7 +3,7 @@ import "./App.css";
 import horeo from "./image/horeo.jpg";
 import vokal from "./image/vokal.jpg";
 import aktMast from "./image/aktMast.jpg";
-import horeoo from "./image/horeoo.jpg";
+// import horeoo from "./image/horeoo.jpg";
 import izo from "./image/izo.jpg";
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
@@ -11,13 +11,13 @@ import Directions from "./Components/Directions/Directions";
 
 class App extends Component {
   state = {
-    directions: [
+    artDirections: [
       {
         id: 1,
         name: "Хореография",
         descr:
           "Танцы – оптимальный выбор для физического развития ребёнка в любом возрасте. Занятия хореографией развивают силу, ловкость, гибкость, координацию движений и чувство ритма, формируют походку и осанку, избавляют от стеснительности и зажатости. Танцы воспитывают в ребёнке с малых лет трудолюбие, целеустремленность, собранность, а также умение концентрироваться и запоминать",
-        url: horeoo,
+        url: horeo,
       },
       {
         id: 2,
@@ -35,19 +35,37 @@ class App extends Component {
       },
       {
         id: 4,
-        name: "Изобразительное искусство",
+        name: "Изостудия",
         descr:
           "Вас ждёт знакомство с множеством живописных и графических техник, а также интересные эксперименты с художественными материалами! На занятиях мы будем рисовать, лепить, работать с бумагой и создавать классные работы своими руками! Обучение изобразительному искусству развивает фантазию и любознательность, улучшает память и внимание и самое главное – прививает любовь к творчеству!",
         url: izo,
       },
     ],
+    edDirections: [
+      {
+        id: 1,
+        name: "Занятия для дошкольников",
+        descr: "text",
+        url: "",
+      },
+      {
+        id: 2,
+        name: "Английский язык",
+        descr: "text",
+        url: "",
+      },
+    ],
   };
+
   render() {
     return (
       <div className="container">
         <Header />
         <Main>
-          <Directions data={this.state.directions} />
+          <Directions
+            dataArt={this.state.artDirections}
+            dataEd={this.state.edDirections}
+          />
         </Main>
       </div>
     );
