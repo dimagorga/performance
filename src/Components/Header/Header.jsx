@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Menu from "@material-ui/icons/Menu";
 import Navigation from "../Navigation/Navigation";
 import s from "./Header.module.css";
 
@@ -21,7 +22,7 @@ class Header extends Component {
         </a>
         <div className={s.mobileMenu}>
           <button className={s.burger} onClick={this.toggle}>
-            =
+            <Menu className={s.burgerIcon} />
           </button>
           {this.state.visible && (
             <div className={s.mobileNav}>

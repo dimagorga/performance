@@ -3,17 +3,17 @@
 }
 
 .list {
-  padding: 30px 10px 30px 10px;
+  padding: 30px 10px 0 10px;
 }
 
 .item {
+  position: relative;
   box-sizing: border-box;
   width: 300px;
-  padding: 0 15px;
   margin: 0 auto;
   background-color: #ffeb09;
-  cursor: pointer;
   transition: box-shadow 250ms;
+  overflow: hidden;
 }
 
 .item:hover {
@@ -30,48 +30,93 @@
   font-size: 18px;
   padding: 15px;
 }
+.icon {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  color: white;
+}
+
+.item:hover .icon {
+  color: black;
+}
 
 .image {
   display: block;
   box-sizing: border-box;
   height: 200px;
-  width: 270px;
+  width: 300px;
   object-fit: cover;
-  margin: 0;
+}
+
+.overlay {
+  position: absolute;
+  height: 200px;
+  width: 300px;
+  top: 52px;
+  left: -100%;
+  background-color: rgba(255, 255, 255, 0.904);
+  transition: transform 250ms;
+}
+.item:hover .overlay {
+  transform: translateX(100%);
 }
 
 .description {
-  font-size: 14px;
-  text-align: justify;
-  margin-bottom: 10px;
-  padding: 10px;
+  font-size: 12px;
+  text-align: left;
+  padding: 3% 5%;
 }
 
 @media screen and (min-width: 768px) {
   .list {
     display: flex;
     flex-wrap: wrap;
+    padding: 30px 20px 0 20px;
   }
   .item {
-    min-width: 370px;
-    max-width: 450px;
+    min-width: 350px;
   }
   .item:nth-child(n + 2) {
     margin-bottom: 30px;
   }
+  .icon {
+    right: 15px;
+  }
+
   .image {
-    height: 280px;
-    width: 340px;
+    height: 300px;
+    width: 350px;
+  }
+  .overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 350px;
+  }
+  .description {
+    font-size: 14px;
   }
 }
 
 @media screen and (min-width: 1024px) {
+  .list {
+    padding: 30px 50px 0 50px;
+  }
+
   .item {
-    min-width: 480px;
+    width: 450px;
   }
   .image {
     height: 360px;
     width: 450px;
-    margin: 10px auto;
+  }
+  .overlay {
+    height: 360px;
+    width: 450px;
+  }
+  .description {
+    font-size: 16px;
   }
 }

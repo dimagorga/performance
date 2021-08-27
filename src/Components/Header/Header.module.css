@@ -19,9 +19,21 @@
   position: relative;
   width: 25px;
   height: 25px;
-  border-width: 1px;
+  border: 2px solid white;
   border-radius: 12%;
-  background-color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger:active {
+  transform: scale(0.9);
+}
+
+.burgerIcon {
+  width: 18px;
+  height: 18px;
 }
 
 .mobileNav {
