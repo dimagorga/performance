@@ -11,7 +11,13 @@
 .logo {
   font-weight: 600;
   color: rgb(41, 41, 41);
-  margin-right: 30px;
+  margin-right: 10px;
+}
+.logoDescr {
+  position: relative;
+  top: 2px;
+  font-size: 10px;
+  margin-right: auto;
 }
 
 .burger {
@@ -73,12 +79,20 @@
   text-align: start;
 }
 
+.callIcon {
+  position: relative;
+  top: 2px;
+}
+
 @media screen and (min-width: 768px) {
   .header {
     max-width: 1024px;
   }
   .logo {
     font-size: 20px;
+  }
+  .logoDescr {
+    font-size: 11px;
   }
 
   .mobileMenu {
