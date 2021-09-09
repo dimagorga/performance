@@ -1,79 +1,40 @@
-import { Component } from "react";
+import { useState } from "react";
 import "./App.css";
-import horeo from "./image/horeo.jpg";
-import vokal from "./image/vokal.jpg";
-import aktMast from "./image/aktMast.jpg";
-// import horeoo from "./image/horeoo.jpg";
-import izo from "./image/izo.jpg";
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import Directions from "./Components/Directions/Directions";
+import info from "./data/directionsData";
+import Modal from "./Components/Modal/Modal";
 
-class App extends Component {
-  state = {
-    artDirections: [
-      {
-        id: 1,
-        name: "Хореография",
-        descr:
-          "Танцы – оптимальный выбор для физического развития ребёнка в любом возрасте. Занятия хореографией развивают силу, ловкость, гибкость, координацию движений и чувство ритма, формируют походку и осанку, избавляют от стеснительности и зажатости. Танцы воспитывают в ребёнке с малых лет трудолюбие, целеустремленность, собранность, а также умение концентрироваться и запоминать",
-        url: horeo,
-      },
-      {
-        id: 2,
-        name: "Вокал",
-        descr:
-          "Умение владеть своим голосом и уверенно держаться на сцене будет полезно абсолютно каждому! Занятия дадут возможность освоить правильную постановку дыхания, дикции и артикуляции, развить диапазон голоса и чувство ритма. Ещё один важный фактор: пение помогает преодолеть внутренние комплексы, а также улучшает настроение",
-        url: vokal,
-      },
-      {
-        id: 3,
-        name: "Актёрское мастерство",
-        descr:
-          "Занятия помогают раскрепоститься, почувствовать себя увереннее, а также побороть боязнь выступлений перед публикой. Что не менее важно – это отличный способ выплеснуть эмоции и зарядиться положительной энергией! Развивают воображение, наблюдательность, эмоциональную выразительность, артистизм и способности творческого переживания, человек учится лучше понимать себя и взаимодействовать с другими людьми.",
-        url: aktMast,
-      },
-      {
-        id: 4,
-        name: "Изостудия",
-        descr:
-          "Вас ждёт знакомство с множеством живописных и графических техник, а также интересные эксперименты с художественными материалами! На занятиях мы будем рисовать, лепить, работать с бумагой и создавать классные работы своими руками! Обучение изобразительному искусству развивает фантазию и любознательность, улучшает память и внимание и самое главное – прививает любовь к творчеству!",
-        url: izo,
-      },
-    ],
-    edDirections: [
-      {
-        id: 1,
-        name: "Занятия для дошкольников",
-        descr: "text",
-        url: "",
-      },
-      {
-        id: 2,
-        name: "Английский язык",
-        descr: "text",
-        url: "",
-      },
-    ],
+function App() {
+  const [modal, setModal] = useState(false);
+
+  const onModalOpen = () => {
+    setModal(true);
   };
 
-  render() {
-    return (
-      <div className="container">
-        <Header />
-        <Main>
-          <Directions
-            name="Творческие направления"
-            data={this.state.artDirections}
-          />
-          <Directions
-            name="Образовательные направления"
-            data={this.state.edDirections}
-          />
-        </Main>
-      </div>
-    );
-  }
+  const onModalClose = () => {
+    setModal(false);
+  };
+
+  return (
+    <div className="container">
+      <Header />
+      <Main>
+        <Directions
+          name="Творческие направления"
+          data={info.artDirections}
+          onBtnClick={onModalOpen}
+        />
+        <Directions
+          onBtnClick={onModalOpen}
+          name="Образовательные направления"
+          data={info.edDirections}
+        />
+      </Main>
+      {modal && <Modal close={onModalClose} />}
+    </div>
+  );
 }
 
 export default App;

@@ -2,7 +2,7 @@ import Info from "@material-ui/icons/Info";
 import s from "./Directions.module.css";
 import Button from "../Button/Button";
 
-function Directions({ data, name }) {
+function Directions({ data, name, onBtnClick }) {
   return (
     <div className={s.wrapper}>
       <h2 className={s.mainTitle}>{name}</h2>
@@ -15,7 +15,7 @@ function Directions({ data, name }) {
             <div className={s.overlay}>
               <p className={s.description}>{dir.descr}</p>
             </div>
-            <Button buttonName={"Записаться"} />
+            <Button buttonName={"Записаться"} handleClick={onBtnClick} />
           </li>
         ))}
       </ul>
