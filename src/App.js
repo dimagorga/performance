@@ -8,6 +8,7 @@ import Modal from "./Components/Modal/Modal";
 
 function App() {
   const [modal, setModal] = useState(false);
+  const [infoSub, setInfoSub] = useState([]);
 
   const onModalOpen = () => {
     setModal(true);
@@ -16,6 +17,16 @@ function App() {
   const onModalClose = () => {
     setModal(false);
   };
+
+  function handleFormSubmit(submitInfo) {
+    if (submitInfo.trim === "") {
+      setInfoSub([]);
+    } else {
+      setInfoSub([...submitInfo]);
+      console.log(infoSub);
+    }
+    console.log(infoSub);
+  }
 
   return (
     <div className="container">
@@ -32,7 +43,7 @@ function App() {
           data={info.edDirections}
         />
       </Main>
-      {modal && <Modal close={onModalClose} />}
+      {modal && <Modal close={onModalClose} onSubmit={handleFormSubmit} />}
     </div>
   );
 }
