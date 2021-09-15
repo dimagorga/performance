@@ -25,8 +25,8 @@
   position: relative;
   width: 25px;
   height: 25px;
-  border: 2px solid white;
-  border-radius: 12%;
+
+  border: none;
 
   display: flex;
   justify-content: center;

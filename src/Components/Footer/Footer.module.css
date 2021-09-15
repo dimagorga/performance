@@ -1,0 +1,64 @@
+.wrapper {
+  padding: 10px 30px;
+  border-top: 1px solid rgb(75, 75, 75);
+}
+
+.list {
+  font-size: 12px;
+}
+.logoList {
+  display: flex;
+}
+.itemLogo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  transition: background-color 250ms;
+}
+
+.itemLogo:hover {
+  background-color: #ffeb09;
+}
+
+.mobileLogo {
+  color: black;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 3px;
+  left: 0.5px;
+}
+
+.mobileLogoVk {
+  color: rgb(190, 11, 11);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 18px;
+  top: 5px;
+  left: 6px;
+}
+
+.mobileListLink {
+  color: rgb(41, 41, 41);
+  transition: color 250ms;
+}
+.mobileListLink:hover {
+  color: rgb(255, 217, 0);
+}
+
+.callIcon {
+  position: relative;
+  top: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts {
+    display: flex;
+    justify-content: space-around;
+  }
+  .logo {
+    font-size: 20px;
+  }
+}

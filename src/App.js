@@ -12,6 +12,8 @@ import info from "./data/directionsData";
 import Modal from "./Components/Modal/Modal";
 import Benefits from "./Components/Benefits/Benefits";
 import BenefitsList from "./Components/BenefitsList/BenefitsList";
+import Footer from "./Components/Footer/Footer";
+import Team from "./Components/Team/Team";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -82,7 +84,9 @@ function App() {
           name="Образовательные направления"
           data={info.edDirections}
         />
+        <Team />
       </Main>
+      <Footer />
       {modal && <Modal close={onModalClose} onSubmit={handleFormSubmit} />}
     </div>
   );
