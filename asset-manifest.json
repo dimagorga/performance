@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/performance/static/css/main.bacebcf6.chunk.css",
+    "main.js": "/performance/static/js/main.8c19a43c.chunk.js",
+    "main.js.map": "/performance/static/js/main.8c19a43c.chunk.js.map",
+    "runtime-main.js": "/performance/static/js/runtime-main.dbd61633.js",
+    "runtime-main.js.map": "/performance/static/js/runtime-main.dbd61633.js.map",
+    "static/css/2.90f267a6.chunk.css": "/performance/static/css/2.90f267a6.chunk.css",
+    "static/js/2.3ec77475.chunk.js": "/performance/static/js/2.3ec77475.chunk.js",
+    "static/js/2.3ec77475.chunk.js.map": "/performance/static/js/2.3ec77475.chunk.js.map",
+    "index.html": "/performance/index.html",
+    "static/css/2.90f267a6.chunk.css.map": "/performance/static/css/2.90f267a6.chunk.css.map",
+    "static/css/main.bacebcf6.chunk.css.map": "/performance/static/css/main.bacebcf6.chunk.css.map",
+    "static/js/2.3ec77475.chunk.js.LICENSE.txt": "/performance/static/js/2.3ec77475.chunk.js.LICENSE.txt",
+    "static/media/aktMast.deb304e8.jpg": "/performance/static/media/aktMast.deb304e8.jpg",
+    "static/media/horeo.13312407.jpg": "/performance/static/media/horeo.13312407.jpg",
+    "static/media/izo.7f779ea0.jpg": "/performance/static/media/izo.7f779ea0.jpg",
+    "static/media/Main.module.css": "/performance/static/media/logotype_perfomance.2db474d9.png",
+    "static/media/slick-theme.css": "/performance/static/media/slick.c94f7671.ttf",
+    "static/media/vk.9401c927.svg": "/performance/static/media/vk.9401c927.svg",
+    "static/media/vokal.2f08585d.jpg": "/performance/static/media/vokal.2f08585d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dbd61633.js",
+    "static/css/2.90f267a6.chunk.css",
+    "static/js/2.3ec77475.chunk.js",
+    "static/css/main.bacebcf6.chunk.css",
+    "static/js/main.8c19a43c.chunk.js"
+  ]
+}
