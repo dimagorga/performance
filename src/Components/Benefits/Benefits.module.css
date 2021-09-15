@@ -1,0 +1,14 @@
+.wrapper {
+  margin: 0 auto 15px;
+  width: 240px;
+}
+.name {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.descr {
+  margin: 0 auto;
+  font-size: 12px;
+  width: 200px;
+}
