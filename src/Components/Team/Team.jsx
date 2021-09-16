@@ -3,7 +3,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import s from "./Team.module.css";
 import team from "../../data/team";
-import { colors } from "@material-ui/core";
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (

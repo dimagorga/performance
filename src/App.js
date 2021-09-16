@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Mail from "@material-ui/icons/MailOutlineRounded";
 import MoneyOffRoundedIcon from "@material-ui/icons/MoneyOffRounded";
 import FormatListNumberedRoundedIcon from "@material-ui/icons/FormatListNumberedRounded";
 import LocationCityRoundedIcon from "@material-ui/icons/LocationCityRounded";
