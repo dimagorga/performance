@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import s from "./Team.module.css";
 import team from "../../data/team";
+import { useState } from "react";
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -38,6 +39,7 @@ function SamplePrevArrow(props) {
 }
 
 export default function Team() {
+  const [showMore, setShowMore] = useState(false);
   const settings = {
     dots: false,
     infinite: false,
@@ -47,6 +49,12 @@ export default function Team() {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
+
+  function onShowMore() {
+    setShowMore((prev) => {
+      return !prev;
+    });
+  }
   return (
     <div className={s.wrapper}>
       <Slider {...settings} className={s.slider}>
@@ -56,6 +64,16 @@ export default function Team() {
               <img src={member.url} alt={member.name} className={s.image} />
               <h4 className={s.title}>{member.name}</h4>
               <p className={s.position}>{member.position}</p>
+              <p className={s.descrMobile}>
+                {!showMore ? member.descr.slice(0, 60) + "..." : member.descr}
+                <button
+                  className={s.showMoreBtn}
+                  type="button"
+                  onClick={onShowMore}
+                >
+                  {!showMore ? "Читать далее" : "Скрыть"}
+                </button>
+              </p>
               <p className={s.descr}>{member.descr}</p>
             </div>
           );

@@ -1,14 +1,29 @@
 .wrapper {
   margin: 0 auto 15px;
-  width: 240px;
+  width: 150px;
 }
 .name {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
 }
 
 .descr {
   margin: 0 auto;
   font-size: 12px;
-  width: 200px;
+  width: 130px;
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    width: 240px;
+  }
+  .name {
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .descr {
+    font-size: 12px;
+    width: 200px;
+  }
 }
