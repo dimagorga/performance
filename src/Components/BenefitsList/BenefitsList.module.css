@@ -3,8 +3,11 @@
   background-color: #fff;
 }
 .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
-  padding: 20px 15px;
+  padding: 15px 15px;
 }
 .title {
   font-size: 20px;
@@ -12,8 +15,8 @@
 
 @media screen and (min-width: 678px) {
   .list {
-    display: flex;
     justify-content: space-between;
+    flex-wrap: nowrap;
     margin: 0;
   }
 }
