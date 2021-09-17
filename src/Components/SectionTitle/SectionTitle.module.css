@@ -1,4 +1,10 @@
 .sectionTitle {
   font-size: 20px;
-  padding-top: 20px;
+  padding: 20px 0;
+}
+
+@media screen and (min-width: 678px) {
+  .sectionTitle {
+    font-size: 30px;
+  }
 }

@@ -12,7 +12,7 @@ function SampleNextArrow(props) {
       style={{
         ...style,
         display: "block",
-        background: "#ffeb09",
+        background: "#fcca21",
         borderRadius: "50%",
         padding: "2px",
       }}

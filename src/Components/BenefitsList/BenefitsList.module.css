@@ -1,5 +1,5 @@
 .wrapper {
-  padding: 20px 0 0 0;
+  padding: 50px 0 50px 0;
   background-color: #fff;
 }
 .list {
@@ -11,6 +11,7 @@
 }
 .title {
   font-size: 20px;
+  padding-bottom: 30px;
 }
 
 @media screen and (min-width: 678px) {
@@ -18,5 +19,9 @@
     justify-content: space-between;
     flex-wrap: nowrap;
     margin: 0;
+  }
+  .title {
+    font-size: 30px;
+    padding-bottom: 30px;
   }
 }

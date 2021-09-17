@@ -31,7 +31,7 @@ function App() {
     if (submitInfo.trim === "") {
       setInfoSub([]);
     } else {
-      setInfoSub([...submitInfo, infoSub]);
+      setInfoSub([...submitInfo]);
     }
   }
 
@@ -79,7 +79,7 @@ function App() {
         <Directions onBtnClick={onModalOpen} data={info.edDirections} />
 
         <Team>
-          <SectionTitle title="Наша команда" />
+          <SectionTitle title="Преподаватели" />
         </Team>
       </Main>
       <Footer />

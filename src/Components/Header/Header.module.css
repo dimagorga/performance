@@ -2,13 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  max-width: 320px;
+
   background-color: rgb(236, 238, 240);
   padding: 20px;
   position: sticky;
   top: 0px;
-  z-index: 9999;
+  z-index: 30;
 }
 
 .logo {

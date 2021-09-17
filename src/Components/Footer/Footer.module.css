@@ -1,11 +1,24 @@
 .wrapper {
+  background-color: rgb(236, 238, 240);
   padding: 10px 30px;
-  border-top: 1px solid rgb(75, 75, 75);
+}
+.title {
+  padding-bottom: 10px;
+  font-size: 16px;
 }
 
 .list {
-  font-size: 12px;
+  font-size: 13px;
+  padding-bottom: 15px;
 }
+.item {
+  padding: 3px;
+}
+.footerButton {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
 .logoList {
   display: flex;
 }
@@ -18,26 +31,24 @@
 }
 
 .itemLogo:hover {
-  background-color: #ffeb09;
+  background-color: #fcca21;
 }
 
 .mobileLogo {
   color: black;
   display: flex;
-  justify-content: center;
   position: relative;
+  font-size: 25px;
   top: 3px;
-  left: 0.5px;
+  left: 3px;
 }
 
 .mobileLogoVk {
-  color: rgb(190, 11, 11);
   display: flex;
   justify-content: center;
   position: relative;
-  width: 18px;
+  height: 30px;
   top: 5px;
-  left: 6px;
 }
 
 .mobileListLink {
@@ -51,14 +62,39 @@
 .callIcon {
   position: relative;
   top: 2px;
+  margin-right: 5px;
 }
 
 @media screen and (min-width: 768px) {
+  .wrapper {
+    background-image: url(../../image/logotype_perfomance.png);
+    background-size: 320px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .title {
+    padding-bottom: 10px;
+    font-size: 20px;
+  }
+  .list {
+    font-size: 15px;
+    padding-bottom: 0;
+  }
   .contacts {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
+
   .logo {
     font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    background-image: url(../../image/logotype_perfomance.png);
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }

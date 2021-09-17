@@ -6,10 +6,11 @@
   border-radius: 5%;
   border-width: 0.5px;
   background-color: #fff;
-  transition: transform 250ms;
+  transition: transform 250ms, color 250ms, background-color 250ms;
 }
 
 .button:hover {
   transform: scale(1.03);
-  background-color: rgb(236, 238, 240);
+  color: #fff;
+  background-color: rgb(0, 0, 0);
 }

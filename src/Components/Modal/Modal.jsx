@@ -3,25 +3,22 @@ import { useState, useEffect } from "react";
 import s from "./Modal.module.css";
 import Button from "../Button/Button";
 import ModalInput from "../ModalInput/ModalInput";
-import ModalSelect from "../ModalSelect/ModalSelect";
+// import ModalSelect from "../ModalSelect/ModalSelect";
 
 const modalRoot = document.querySelector("#modal-root");
 
 function Modal({ close, onSubmit }) {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
-  const [variables, setVariables] = useState([
-    { id: 0, name: "Не можем определиться" },
-    { id: 1, name: "Хореография" },
-    { id: 2, name: "ИЗО" },
-    { id: 3, name: "Вокал" },
-    { id: 4, name: "Актёрское мастерство" },
-    { id: 5, name: "Английский язык" },
-    { id: 6, name: "Подготовка к школе" },
-  ]);
-  const [variable, setVariable] = useState("");
-  const [showMore, setShowMore] = useState(false);
-  console.log("это выбранный", variable);
+  // const [variables, setVariables] = useState([
+  //   { id: 0, name: "Не можем определиться" },
+  //   { id: 1, name: "Хореография" },
+  //   { id: 2, name: "ИЗО" },
+  //   { id: 3, name: "Вокал" },
+  //   { id: 4, name: "Актёрское мастерство" },
+  //   { id: 5, name: "Английский язык" },
+  //   { id: 6, name: "Подготовка к школе" },
+  // ]);
 
   useEffect(() => {
     window.addEventListener("keydown", handleCloseModal);
@@ -40,10 +37,6 @@ function Modal({ close, onSubmit }) {
       alert("Низзя");
     }
     onSubmit([name, number]);
-    console.log(variables);
-  };
-  const getVariable = (variable) => {
-    setVariable(variable);
   };
 
   const handleChange = (e) => {
@@ -55,15 +48,9 @@ function Modal({ close, onSubmit }) {
       case "number":
         setNumber(value);
         break;
-      case "variables":
-        setVariables(value);
-        break;
       default:
         return;
     }
-  };
-  const onShowMoreClick = () => {
-    setShowMore(true);
   };
 
   return createPortal(
@@ -96,40 +83,7 @@ function Modal({ close, onSubmit }) {
             title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
             required
           />
-          <div>
-            <ModalSelect
-              className={s.select}
-              name="variables"
-              value={variables}
-              onChange={handleChange}
-              getVariable={getVariable}
-            />
 
-            <Button
-              className={s.addMoreBtn}
-              type="click"
-              buttonName="+"
-              handleClick={onShowMoreClick}
-            />
-            {showMore && (
-              <div>
-                <ModalSelect
-                  className={s.select}
-                  name="variables"
-                  value={variables}
-                  onChange={handleChange}
-                  getVariable={getVariable}
-                />
-
-                <Button
-                  className={s.addMoreBtn}
-                  type="click"
-                  buttonName="+"
-                  handleClick={onShowMoreClick}
-                />
-              </div>
-            )}
-          </div>
           <Button
             className={s.modalBtn}
             type="submit"

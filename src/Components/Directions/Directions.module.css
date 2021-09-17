@@ -7,7 +7,7 @@
   box-sizing: border-box;
   width: 300px;
   margin: 0 auto;
-  background-color: #ffeb09;
+  background-color: #fcca21;
   transition: box-shadow 250ms;
   overflow: hidden;
 }
@@ -71,7 +71,7 @@
   .item {
     min-width: 350px;
   }
-  .item:nth-child(n + 2) {
+  .item:nth-child(n - 2) {
     margin-bottom: 20px;
   }
   .icon {
