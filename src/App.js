@@ -13,6 +13,7 @@ import Benefits from "./Components/Benefits/Benefits";
 import BenefitsList from "./Components/BenefitsList/BenefitsList";
 import Footer from "./Components/Footer/Footer";
 import Team from "./Components/Team/Team";
+import SectionTitle from "./Components/SectionTitle/SectionTitle";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -37,7 +38,7 @@ function App() {
   return (
     <div className="container">
       <Header />
-      <Main>
+      <Main onBtnClick={onModalOpen}>
         <BenefitsList>
           <li>
             <Benefits
@@ -72,18 +73,14 @@ function App() {
             </Benefits>
           </li>
         </BenefitsList>
+        <SectionTitle title="Творческие направления" />
+        <Directions data={info.artDirections} onBtnClick={onModalOpen} />
+        <SectionTitle title="Образовательные направления" />
+        <Directions onBtnClick={onModalOpen} data={info.edDirections} />
 
-        <Directions
-          name="Творческие направления"
-          data={info.artDirections}
-          onBtnClick={onModalOpen}
-        />
-        <Directions
-          onBtnClick={onModalOpen}
-          name="Образовательные направления"
-          data={info.edDirections}
-        />
-        <Team />
+        <Team>
+          <SectionTitle title="Наша команда" />
+        </Team>
       </Main>
       <Footer />
       {modal && <Modal close={onModalClose} onSubmit={handleFormSubmit} />}

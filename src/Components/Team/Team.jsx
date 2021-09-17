@@ -38,7 +38,7 @@ function SamplePrevArrow(props) {
   );
 }
 
-export default function Team() {
+export default function Team({ children }) {
   const [showMore, setShowMore] = useState(false);
   const settings = {
     dots: false,
@@ -57,6 +57,7 @@ export default function Team() {
   }
   return (
     <div className={s.wrapper}>
+      {children}
       <Slider {...settings} className={s.slider}>
         {team.map((member) => {
           return (

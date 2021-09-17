@@ -5,7 +5,6 @@ import Button from "../Button/Button";
 function Directions({ data, name, onBtnClick }) {
   return (
     <div className={s.wrapper}>
-      <h2 className={s.mainTitle}>{name}</h2>
       <ul className={s.list}>
         {data.map((dir) => (
           <li className={s.item} key={dir.id}>
