@@ -14,6 +14,7 @@ import BenefitsList from "./Components/BenefitsList/BenefitsList";
 import Footer from "./Components/Footer/Footer";
 import Team from "./Components/Team/Team";
 import SectionTitle from "./Components/SectionTitle/SectionTitle";
+import Price from "./Components/Price/Price";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -81,6 +82,10 @@ function App() {
         <Team>
           <SectionTitle title="Преподаватели" />
         </Team>
+
+        <SectionTitle title="Стоимость абонементов" />
+
+        <Price />
       </Main>
       <Footer />
       {modal && <Modal close={onModalClose} onSubmit={handleFormSubmit} />}

@@ -1,0 +1,22 @@
+.wraper {
+  background-image: linear-gradient(to right, #f7f6f8c4, #e9e6f0c7),
+    url("../../image/abonements.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.list {
+  padding: 15px;
+}
+.item {
+  padding: 10px;
+}
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 22px;
+  }
+}

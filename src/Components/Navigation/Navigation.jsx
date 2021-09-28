@@ -15,11 +15,11 @@ function Navigation() {
             Преподаватели
           </a>
         </li>
-        {/* <li className={s.menuItem}>
+        <li className={s.menuItem}>
           <a className={s.navLink} href="/">
-            Галерея
+            Цены
           </a>
-        </li> */}
+        </li>
         <ul className={s.contacts}>
           <li className={s.contactsListItem}>
             <a className={s.contactsListLink} href="tel:+375339044424">
