@@ -1,23 +1,16 @@
-// import { useEffect, useState } from "react";
+import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-export default function ModalSelect({ name, value, getVariable }) {
-  // const [select, setSelect] = useState("");
-
-  const onChangeSelect = (e) => {
-    const selectName = e.target.selectedOptions[0].text;
-    return selectName;
-  };
+export default function ModalSelect({ variables }) {
+  const [select, setSelect] = useState("");
 
   return (
-    <label htmlFor="67">
-      <select onChange={onChangeSelect} name={name}>
-        {value.map((variable) => {
-          return (
-            <option key={uuidv4()} value={variable.id}>
-              {variable.name}
-            </option>
-          );
-        })}
+    <label>
+      <select value={select} onChange={(e) => setSelect(e.target.value)}>
+        {variables.map((o) => (
+          <option key={o.name} value={o.name}>
+            {o.name}
+          </option>
+        ))}
       </select>
     </label>
   );

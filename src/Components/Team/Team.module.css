@@ -1,10 +1,11 @@
 .wrapper {
-  background-color: #fff;
+  background-color: #fcca21;
 }
 .slider {
   margin: 0 auto;
   width: 270px;
   padding: 10px;
+  padding-bottom: 30px;
 }
 .title {
   font-size: 18px;
@@ -38,43 +39,66 @@
 
 @media screen and (min-width: 768px) {
   .slider {
-    width: 700px;
+    min-width: 700px;
+    max-width: 720px;
+  }
+
+  .title {
+    font-size: 22px;
+    padding: 5px;
+  }
+
+  .card {
+    display: flex;
   }
 
   .image {
     display: block;
     width: 300px;
+    height: 400px;
+    object-fit: contain;
     margin: 0 auto;
   }
+  .cardInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .descrMobile {
     display: none;
   }
   .descr {
-    width: 600px;
-    margin: 0 auto;
+    min-width: 300px;
+    max-width: 360px;
+    margin-left: 10px;
     display: block;
     padding: 5px;
-    font-size: 14px;
+    font-size: 12px;
+    text-align: left;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .slider {
-    width: 1100px;
+    min-width: 1000px;
+    max-width: 1180px;
+    /* padding: 15px; */
   }
 
-  .image {
+  /* .image {
     width: 400px;
     margin: 0 auto;
-  }
+  } */
   .descrMobile {
     display: none;
   }
+
   .descr {
-    width: 700px;
-    margin: 0 auto;
+    min-width: 500px;
+    max-width: 600px;
     display: block;
     padding: 5px;
-    font-size: 14px;
+    font-size: 16px;
   }
 }

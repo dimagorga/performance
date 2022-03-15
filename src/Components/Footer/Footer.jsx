@@ -56,6 +56,7 @@ export default function Footer() {
                 rel="noreferrer"
               >
                 <InstagramIcon fontSize="inherit" />
+                <span className={s.socialLinks}>performance_brest</span>
               </a>
             </li>
             <li className={s.itemLogo}>
@@ -66,6 +67,7 @@ export default function Footer() {
                 rel="noreferrer"
               >
                 <VkLogo />
+                <span className={s.socialLinks}>performance_brest</span>
               </a>
             </li>
           </ul>

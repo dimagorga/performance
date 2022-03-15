@@ -9,6 +9,11 @@
   padding: 15px;
 }
 .item {
+  padding: 15px;
+}
+
+.note {
+  font-size: 13px;
   padding: 10px;
 }
 @media screen and (min-width: 768px) {

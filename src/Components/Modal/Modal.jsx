@@ -1,25 +1,35 @@
 import { createPortal } from "react-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import InputMask from "react-input-mask";
+import { BallTriangle } from "react-loader-spinner";
 import s from "./Modal.module.css";
 import Button from "../Button/Button";
-import ModalInput from "../ModalInput/ModalInput";
-// import ModalSelect from "../ModalSelect/ModalSelect";
 
 const modalRoot = document.querySelector("#modal-root");
 
-function Modal({ close, onSubmit }) {
+function Modal({ close }) {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
-  // const [variables, setVariables] = useState([
-  //   { id: 0, name: "Не можем определиться" },
-  //   { id: 1, name: "Хореография" },
-  //   { id: 2, name: "ИЗО" },
-  //   { id: 3, name: "Вокал" },
-  //   { id: 4, name: "Актёрское мастерство" },
-  //   { id: 5, name: "Английский язык" },
-  //   { id: 6, name: "Подготовка к школе" },
-  // ]);
-
+  const [select, setSelect] = useState("Не можем определиться");
+  const [sendSuccess, setSendSuccess] = useState(false);
+  const [loader, setLoader] = useState(false);
+  const [variables] = useState([
+    {
+      id: 0,
+      name: "Выбрать направление",
+      disabled: true,
+      selected: true,
+      hidden: true,
+    },
+    { id: 1, name: "Хореография" },
+    { id: 2, name: "ИЗО" },
+    { id: 3, name: "Вокал" },
+    { id: 4, name: "Актёрское мастерство" },
+    { id: 5, name: "Английский язык" },
+    { id: 6, name: "Подготовка к школе" },
+  ]);
+  const form = useRef();
   useEffect(() => {
     window.addEventListener("keydown", handleCloseModal);
     return () => window.removeEventListener("keydown", handleCloseModal);
@@ -31,12 +41,8 @@ function Modal({ close, onSubmit }) {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (name.trim() === "" || number.trim() === "") {
-      alert("Низзя");
-    }
-    onSubmit([name, number]);
+  const selectOption = (e) => {
+    return setSelect(e.target.value);
   };
 
   const handleChange = (e) => {
@@ -52,45 +58,100 @@ function Modal({ close, onSubmit }) {
         return;
     }
   };
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoader(true);
+    emailjs
+      .sendForm(
+        "performance_brest",
+        "template_bsmyxib",
+        form.current,
+        "user_B8S5k7Vkaf6wBLV9wi53c"
+      )
+      .then(
+        (result) => {
+          setSendSuccess(true);
+          setLoader(false);
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   return createPortal(
     <div className={s.backdrop} onClick={handleCloseModal}>
-      <div className={s.wrapper}>
-        <h3 className={s.title}>Запись на пробное занятие </h3>
-        <form className={s.form} onSubmit={handleSubmit}>
-          <ModalInput
-            className={s.input}
-            size="small"
-            type="text"
-            onChange={handleChange}
-            label={"ФИО"}
-            name="name"
-            value={name}
-            pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-            title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
-            required
-          />
+      {!loader ? (
+        <div className={s.wrapper}>
+          {!sendSuccess && (
+            <h2 className={s.title}>Запись на пробное занятие </h2>
+          )}
+          {!sendSuccess ? (
+            <form ref={form} className={s.form} onSubmit={sendEmail}>
+              <label className={s.label}>
+                <input
+                  placeholder="ФИО"
+                  className={s.tinput}
+                  type="text"
+                  onChange={handleChange}
+                  label={"ФИО"}
+                  name="name"
+                  value={name}
+                  title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
+                  required
+                />
+              </label>
 
-          <ModalInput
-            className={s.input}
-            size="small"
-            type="tel"
-            onChange={handleChange}
-            label={"Номер телефона"}
-            name="number"
-            value={number}
-            pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-            title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
-            required
-          />
+              <label className={s.label}>
+                <InputMask
+                  required
+                  placeholder="Номер телефона"
+                  mask="+375 (99) 9999999"
+                  className={s.tinput}
+                  onChange={handleChange}
+                  value={number}
+                  name="number"
+                />
+              </label>
 
-          <Button
-            className={s.modalBtn}
-            type="submit"
-            buttonName="Оставить заявку"
-          />
-        </form>
-      </div>
+              <label>
+                <select
+                  required
+                  className={s.select}
+                  value={select}
+                  onChange={selectOption}
+                  name="select"
+                >
+                  {variables.map((o) => (
+                    <option
+                      key={o.name}
+                      className={s.selectOption}
+                      value={o.name}
+                      defaultValue={o.selected}
+                      hidden={o.hidden}
+                    >
+                      {o.name}
+                    </option>
+                  ))}
+                </select>
+              </label>
+
+              <Button
+                className={s.modalBtn}
+                type="submit"
+                buttonName="Оставить заявку"
+              />
+            </form>
+          ) : (
+            <p className={s.thanksMsg}>
+              Спасибо! Наш администратор скоро свяжется с Вами.
+            </p>
+          )}
+        </div>
+      ) : (
+        <BallTriangle color="rgb(255, 217, 0)" height={80} width={80} />
+      )}
     </div>,
     modalRoot
   );

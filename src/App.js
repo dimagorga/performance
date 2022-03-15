@@ -18,7 +18,6 @@ import Price from "./Components/Price/Price";
 
 function App() {
   const [modal, setModal] = useState(false);
-  const [infoSub, setInfoSub] = useState([]);
 
   const onModalOpen = () => {
     setModal(true);
@@ -27,14 +26,6 @@ function App() {
   const onModalClose = () => {
     setModal(false);
   };
-
-  function handleFormSubmit(submitInfo) {
-    if (submitInfo.trim === "") {
-      setInfoSub([]);
-    } else {
-      setInfoSub([...submitInfo]);
-    }
-  }
 
   return (
     <div className="container">
@@ -74,21 +65,19 @@ function App() {
             </Benefits>
           </li>
         </BenefitsList>
-        <SectionTitle title="Творческие направления" />
+        <SectionTitle id="directions" title="Творческие направления" />
         <Directions data={info.artDirections} onBtnClick={onModalOpen} />
-        <SectionTitle title="Образовательные направления" />
-        <Directions onBtnClick={onModalOpen} data={info.edDirections} />
+        {/* <SectionTitle title="Образовательные направления" />
+        <Directions onBtnClick={onModalOpen} data={info.edDirections} /> */}
 
         <Team>
           <SectionTitle title="Преподаватели" />
         </Team>
 
-        <SectionTitle title="Стоимость абонементов" />
-
         <Price />
       </Main>
       <Footer />
-      {modal && <Modal close={onModalClose} onSubmit={handleFormSubmit} />}
+      {modal && <Modal close={onModalClose} />}
     </div>
   );
 }

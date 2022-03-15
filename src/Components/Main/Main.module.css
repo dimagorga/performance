@@ -2,12 +2,13 @@
   text-align: center;
 }
 .mainTitle {
-  padding-top: 145px;
+  height: 25vh;
+  padding-top: 160px;
   padding-bottom: 100px;
   background-color: #fcca21;
   background-image: url("../../image/logotype_perfomance.png");
   background-position: center;
-  background-position-y: 10px;
+  background-position-y: 25px;
   background-size: 200px;
   background-repeat: no-repeat;
   font-size: 10px;
@@ -21,10 +22,10 @@
 
 @media screen and (min-width: 768px) {
   .mainTitle {
-    padding-top: 220px;
+    padding-top: 235px;
     padding-bottom: 120px;
     font-size: 15px;
-    background-position-y: 1px;
+    background-position-y: 15px;
     background-size: 330px;
   }
   h1 {
@@ -34,9 +35,9 @@
 
 @media screen and (min-width: 1023px) {
   .mainTitle {
-    padding-top: 240px;
-    padding-bottom: 150px;
-    background-position-y: -40px;
+    padding-top: 255px;
+    padding-bottom: 135px;
+    background-position-y: -25px;
     background-size: 430px;
     font-size: 20px;
   }

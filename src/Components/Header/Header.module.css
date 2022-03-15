@@ -9,6 +9,13 @@
   top: 0px;
   z-index: 30;
 }
+.wrapper {
+  width: 290px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
 
 .logo {
   font-weight: 600;
@@ -87,8 +94,16 @@
 }
 
 @media screen and (min-width: 768px) {
-  .header {
+  /* .header {
     max-width: 1180px;
+  } */
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1180px;
+    margin: 0 auto;
   }
   .logo {
     font-size: 20px;

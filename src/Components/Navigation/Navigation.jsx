@@ -1,24 +1,34 @@
 import Call from "@material-ui/icons/Call";
 import Mail from "@material-ui/icons/Mail";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import s from "./Navigation.module.css";
 function Navigation() {
   return (
     <nav className={s.nav}>
       <ul className={s.menuList}>
         <li className={s.menuItem}>
-          <a className={s.navLink} href="/">
+          {/* <a className={s.navLink} href="/">
             Направления
-          </a>
+          </a> */}
+          <AnchorLink className={s.navLink} href="#directions">
+            Направления
+          </AnchorLink>
         </li>
         <li className={s.menuItem}>
-          <a className={s.navLink} href="/">
+          <AnchorLink className={s.navLink} href="#team">
             Преподаватели
-          </a>
+          </AnchorLink>
+          {/* <a className={s.navLink} href="/">
+            Преподаватели
+          </a> */}
         </li>
         <li className={s.menuItem}>
-          <a className={s.navLink} href="/">
+          <AnchorLink className={s.navLink} href="#price">
             Цены
-          </a>
+          </AnchorLink>
+          {/* <a className={s.navLink} href="/">
+            Цены
+          </a> */}
         </li>
         <ul className={s.contacts}>
           <li className={s.contactsListItem}>
