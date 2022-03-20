@@ -1,5 +1,5 @@
 @media screen and (min-width: 320px) {
-  .button {
+  /* .button {
     width: fit-content;
     padding: 8px;
     margin: 15px auto;
@@ -10,55 +10,42 @@
     color: black;
     background-color: white;
     transition: all 150ms ease-in-out;
+  } */
+
+  .button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #ffd000;
+    color: #000000;
+    border: 2px solid #bfa406;
+    border-radius: 19px;
+    font-size: 13px;
+    margin: 10px auto;
+    padding: 10px 25px;
+    transition: all 0.4s ease;
+  }
+
+  .button:hover {
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #efaf00;
+    border-color: #e2e2e2;
+    cursor: pointer;
   }
 }
 @media screen and (min-width: 768px) {
   .button {
-    font-size: 16px;
-  }
-  .button:hover {
-    transform: scale(1.03);
-    cursor: pointer;
-    box-shadow: 3px 3px 3px #767674;
+    font-size: 14px;
+    padding: 12px 30px;
   }
   .button:active {
     transform: scale(0.93);
   }
 }
 
-/* .button {
-  padding: 5px;
-  margin: 15px 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  border-radius: 5%;
-  border-width: 0.5px;
-  background-color: #fff;
-  transition: transform 250ms, color 250ms, background-color 250ms;
+@media screen and (min-width: 1024px) {
+  .button {
+    font-size: 16px;
+    padding: 13px 35px;
+  }
 }
-
-.button:hover {
-  transform: scale(1.03);
-  color: #fff;
-  background-color: rgb(0, 0, 0);
-} */
-
-/* .button {
-  display: inline-block;
-  cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  text-decoration: none;
-  padding: 10px 12px;
-  color: #354251;
-  background: #ffff;
-  border-radius: 0px;
-  border: 2px solid #354251;
-}
-
-.button:hover {
-  background: #354251;
-  color: #ffffff;
-  border: 2px solid #354251;
-  transition: all 0.25s ease;
-} */

@@ -2,6 +2,8 @@ import { Component } from "react";
 import Call from "@material-ui/icons/Call";
 import Mail from "@material-ui/icons/Mail";
 import Menu from "@material-ui/icons/Menu";
+import Close from "@material-ui/icons/Close";
+
 import Navigation from "../Navigation/Navigation";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import s from "./Header.module.css";
@@ -27,7 +29,11 @@ class Header extends Component {
           <p className={s.logoDescr}>Центр творчества</p>
           <div className={s.mobileMenu}>
             <button className={s.burger} onClick={this.toggle}>
-              <Menu className={s.burgerIcon} />
+              {this.state.visible ? (
+                <Close className={s.burgerIcon} />
+              ) : (
+                <Menu className={s.burgerIcon} />
+              )}
             </button>
             {this.state.visible && (
               <div className={s.mobileNav}>
@@ -46,6 +52,15 @@ class Header extends Component {
                     <AnchorLink className={s.mobileListLink} href="#price">
                       Цены
                     </AnchorLink>
+                  </li>
+                  <li className={s.mobileListItem}>
+                    <p
+                      onClick={this.props.onBtnClick}
+                      className={s.mobileListLink}
+                      href="#directions"
+                    >
+                      Запись на пробное занятие
+                    </p>
                   </li>
                   <ul className={s.contactList}>
                     Контакты:

@@ -7,19 +7,23 @@
     padding: 0 15px;
     max-width: 290px;
     margin: 0 auto;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   .mobileCardInfo {
     box-sizing: border-box;
     overflow: hidden;
-    border: 1px solid black;
+    border: 1px solid rgb(230, 230, 230);
+    box-shadow: 5px 3px rgb(230, 230, 230);
     border-radius: 5px;
   }
 
   .mobileImage {
     width: 290px;
-    height: 290px;
+    /* height: 290px; */
     object-fit: contain;
+  }
+  .mobileTitle {
+    font-size: 17px;
   }
 
   .mobileOverlay {
@@ -51,13 +55,14 @@
 
   .cardInfo {
     display: flex;
+    align-items: center;
     justify-content: center;
   }
 
   .image {
-    min-height: 365px;
-    max-height: 470px;
-    min-width: 365px;
+    /* min-height: 360px; */
+    /* max-height: 470px; */
+    min-width: 360px;
     max-width: 470px;
 
     object-fit: contain;
@@ -69,9 +74,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 365px;
+    /* min-height: 340px; */
     max-height: 470px;
-    min-width: 365px;
+    min-width: 360px;
     max-width: 470px;
   }
 
@@ -80,7 +85,7 @@
   }
 
   .description {
-    font-size: 16px;
+    font-size: 14px;
     padding: 20px;
     text-align: left;
   }
@@ -113,7 +118,7 @@
   }
 
   .description {
-    font-size: 22px;
+    font-size: 20px;
     padding: 20px;
     text-align: left;
   }

@@ -29,13 +29,15 @@ function App() {
 
   return (
     <div className="container">
-      <Header />
+      <Header onBtnClick={onModalOpen} />
       <Main onBtnClick={onModalOpen}>
         <BenefitsList>
           <li>
             <Benefits
               name={"Опытные преподаватели"}
-              descr={"Наш центр творчества находится в самом центре города."}
+              descr={
+                "Наши педагоги уже много лет делют то, что любят и любят то, что делают."
+              }
             >
               <SchoolIcon style={{ fontSize: 50 }} />
             </Benefits>
@@ -43,7 +45,9 @@ function App() {
           <li>
             <Benefits
               name={"Удобное расположение"}
-              descr={"Наш центр творчества находится в самом центре города."}
+              descr={
+                "Находимся в самом центре города. Легко добраться из любой точки Бреста."
+              }
             >
               <LocationCityRoundedIcon style={{ fontSize: 50 }} />
             </Benefits>
@@ -51,7 +55,7 @@ function App() {
           <li>
             <Benefits
               name={"Разнообразие направлений"}
-              descr={"Ребёнок может выбрать то, что ему нравится."}
+              descr={"Ваш ребёнок сможет выбрать именнто то, что ему нравится."}
             >
               <FormatListNumberedRoundedIcon style={{ fontSize: 50 }} />
             </Benefits>
@@ -67,8 +71,8 @@ function App() {
         </BenefitsList>
         <SectionTitle id="directions" title="Творческие направления" />
         <Directions data={info.artDirections} onBtnClick={onModalOpen} />
-        {/* <SectionTitle title="Образовательные направления" />
-        <Directions onBtnClick={onModalOpen} data={info.edDirections} /> */}
+        <SectionTitle title="Образовательные направления" />
+        <Directions onBtnClick={onModalOpen} data={info.edDirections} />
 
         <Team>
           <SectionTitle title="Преподаватели" />

@@ -14,7 +14,7 @@ function Directions({ data, name, onBtnClick, onDirClick }) {
                 <img className={s.image} src={dir.url} alt={dir.name} />
               )}
               <div className={s.overlay}>
-                {/* <h2 className={s.title}>{dir.name}</h2> */}
+                <h2 className={s.title}>{dir.name}</h2>
                 <p className={s.description}>{dir.descr}</p>
                 <Button buttonName={"Записаться"} handleClick={onBtnClick} />
               </div>
@@ -37,7 +37,7 @@ function Directions({ data, name, onBtnClick, onDirClick }) {
             <div className={s.mobileCardInfo}>
               <img className={s.mobileImage} src={dir.url} alt={dir.name} />
               <div className={s.mobileOverlay}>
-                {/* <h2 className={s.title}>{dir.name}</h2> */}
+                <h2 className={s.mobileTitle}>{dir.name}</h2>
                 <p className={s.mobileDescription}>{dir.descr}</p>
                 <Button buttonName={"Записаться"} handleClick={onBtnClick} />
               </div>

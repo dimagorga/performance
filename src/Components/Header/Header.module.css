@@ -40,6 +40,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 250ms;
 }
 
 .burger:active {
@@ -71,7 +72,7 @@
   border-left: none;
   border-right: none;
 }
-.mobileListItem:nth-child(2) {
+.mobileListItem:nth-child(2n-1) {
   border: none;
 }
 

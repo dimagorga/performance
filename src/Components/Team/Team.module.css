@@ -71,7 +71,7 @@
   .descr {
     min-width: 300px;
     max-width: 360px;
-    margin-left: 10px;
+    margin: 0px 20px;
     display: block;
     padding: 5px;
     font-size: 12px;
