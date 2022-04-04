@@ -12,10 +12,30 @@
 }
 
 .wrapper {
+  position: relative;
   width: 300px;
   box-sizing: border-box;
   padding: 10px;
   background-color: #fff;
+}
+.closeBtn {
+  position: absolute;
+  display: block;
+  right: 5px;
+  top: 5px;
+  transition: all 250ms;
+  padding: 7px;
+  background-color: transparent;
+  border: none;
+}
+
+.closeBtn:hover {
+  fill: #fcca21;
+}
+
+.closeBtnIcon {
+  width: 18px;
+  height: 18px;
 }
 
 .form {

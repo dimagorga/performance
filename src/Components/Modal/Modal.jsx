@@ -2,6 +2,7 @@ import { createPortal } from "react-dom";
 import { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import InputMask from "react-input-mask";
+import Close from "@material-ui/icons/Close";
 import { BallTriangle } from "react-loader-spinner";
 import ReCAPTCHA from "react-google-recaptcha";
 import s from "./Modal.module.css";
@@ -88,6 +89,9 @@ function Modal({ close }) {
     <div className={s.backdrop} onClick={handleCloseModal}>
       {!loader ? (
         <div className={s.wrapper}>
+          <button className={s.closeBtn} onClick={handleCloseModal}>
+            <Close className={s.closeBtnIcon} />
+          </button>
           {!sendSuccess && (
             <h2 className={s.title}>Запись на пробное занятие </h2>
           )}

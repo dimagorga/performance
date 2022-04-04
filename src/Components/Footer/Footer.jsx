@@ -2,7 +2,7 @@ import Call from "@material-ui/icons/Call";
 import Mail from "@material-ui/icons/Mail";
 import LocationCity from "@material-ui/icons/LocationCity";
 import InstagramIcon from "@material-ui/icons/Instagram";
-import { ReactComponent as VkLogo } from "../../image/vk.svg";
+import TelegramIcon from "@material-ui/icons/Telegram";
 import s from "./Footer.module.css";
 
 export default function Footer() {
@@ -55,19 +55,19 @@ export default function Footer() {
                 href="https://www.instagram.com/performance_brest/"
                 rel="noreferrer"
               >
-                <InstagramIcon fontSize="inherit" />
+                <InstagramIcon className={s.socialLinks} fontSize="inherit" />
                 <span className={s.socialLinks}>performance_brest</span>
               </a>
             </li>
             <li className={s.itemLogo}>
               <a
-                className={s.mobileLogoVk}
+                className={s.mobileLogo}
                 target="_blank"
-                href="https://vk.com/performance_brest"
+                href="https://t.me/Performance_info"
                 rel="noreferrer"
               >
-                <VkLogo />
-                <span className={s.socialLinks}>performance_brest</span>
+                <TelegramIcon className={s.socialLinks} />
+                <span className={s.socialLinks}>performance_info</span>
               </a>
             </li>
           </ul>

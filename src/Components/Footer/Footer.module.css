@@ -30,12 +30,13 @@
   transition: background-color 250ms;
 }
 
-.itemLogo:hover .socialLinks {
-  color: #fcca21;
-}
 .socialLinks {
   font-size: 16px;
   transition: color 250ms;
+}
+
+.itemLogo:hover .socialLinks {
+  color: #fcca21;
 }
 .mobileLogo {
   color: black;
@@ -44,15 +45,6 @@
   font-size: 25px;
   top: 3px;
   left: -2px;
-}
-
-.mobileLogoVk {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  color: black;
-  height: 30px;
-  top: 5px;
 }
 
 .mobileListLink {
