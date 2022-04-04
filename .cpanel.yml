@@ -1,3 +1,4 @@
+---
 deployment:
   tasks:
     - export REPOPATH=/home/performa/repositories/performance/*
