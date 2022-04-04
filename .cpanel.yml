@@ -1,5 +1,5 @@
 deployment:
   tasks:
     - export REPOPATH=/home/repositories/performance/*
-    - export SITEPATH=/home/repositories/performance/public/
+    - export SITEPATH=/home/repositories/performance/
     - /bin/rsync -rav --exclude '.git' --exclude '.cpanel.yml' --del $REPOPATH $SITEPATH
