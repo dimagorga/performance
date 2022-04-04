@@ -10,12 +10,12 @@ function Navigation() {
           {/* <a className={s.navLink} href="/">
             Направления
           </a> */}
-          <AnchorLink className={s.navLink} href="#directions">
+          <AnchorLink offset="150" className={s.navLink} href="#directions">
             Направления
           </AnchorLink>
         </li>
         <li className={s.menuItem}>
-          <AnchorLink className={s.navLink} href="#team">
+          <AnchorLink offset="70" className={s.navLink} href="#team">
             Преподаватели
           </AnchorLink>
           {/* <a className={s.navLink} href="/">
@@ -24,7 +24,7 @@ function Navigation() {
         </li>
         <li className={s.menuItem}>
           <AnchorLink className={s.navLink} href="#price">
-            Цены
+            Стоимость
           </AnchorLink>
           {/* <a className={s.navLink} href="/">
             Цены

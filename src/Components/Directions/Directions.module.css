@@ -13,8 +13,13 @@
     box-sizing: border-box;
     overflow: hidden;
     border: 1px solid rgb(230, 230, 230);
-    box-shadow: 5px 3px rgb(230, 230, 230);
     border-radius: 5px;
+    transition: all 250ms;
+  }
+
+  .mobileCardInfo:hover {
+    transform: scale(1.014);
+    box-shadow: 5px 3px rgb(230, 230, 230);
   }
 
   .mobileImage {

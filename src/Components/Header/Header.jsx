@@ -39,18 +39,33 @@ class Header extends Component {
               <div className={s.mobileNav}>
                 <ul>
                   <li className={s.mobileListItem}>
-                    <AnchorLink className={s.mobileListLink} href="#directions">
+                    <AnchorLink
+                      offset="110"
+                      className={s.mobileListLink}
+                      href="#directions"
+                      onClick={this.toggle}
+                    >
                       Направления
                     </AnchorLink>
                   </li>
                   <li className={s.mobileListItem}>
-                    <AnchorLink className={s.mobileListLink} href="#team">
+                    <AnchorLink
+                      offset="60"
+                      className={s.mobileListLink}
+                      href="#team"
+                      onClick={this.toggle}
+                    >
                       Преподаватели
                     </AnchorLink>
                   </li>
                   <li className={s.mobileListItem}>
-                    <AnchorLink className={s.mobileListLink} href="#price">
-                      Цены
+                    <AnchorLink
+                      offset="60"
+                      className={s.mobileListLink}
+                      href="#price"
+                      onClick={this.toggle}
+                    >
+                      Стоимость
                     </AnchorLink>
                   </li>
                   <li className={s.mobileListItem}>

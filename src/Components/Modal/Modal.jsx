@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import InputMask from "react-input-mask";
 import { BallTriangle } from "react-loader-spinner";
+import ReCAPTCHA from "react-google-recaptcha";
 import s from "./Modal.module.css";
 import Button from "../Button/Button";
 
@@ -30,6 +31,8 @@ function Modal({ close }) {
     { id: 6, name: "Подготовка к школе" },
   ]);
   const form = useRef();
+  const recaptchaRef = useRef();
+
   useEffect(() => {
     window.addEventListener("keydown", handleCloseModal);
     return () => window.removeEventListener("keydown", handleCloseModal);
@@ -60,6 +63,7 @@ function Modal({ close }) {
   };
   const sendEmail = (e) => {
     e.preventDefault();
+    recaptchaRef.current.execute();
     setLoader(true);
     emailjs
       .sendForm(
@@ -98,7 +102,7 @@ function Modal({ close }) {
                   label={"ФИО"}
                   name="name"
                   value={name}
-                  title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
+                  title="Введите Ваше Имя"
                   required
                 />
               </label>
@@ -112,6 +116,7 @@ function Modal({ close }) {
                   onChange={handleChange}
                   value={number}
                   name="number"
+                  title="Введите Ваш номер телефона"
                 />
               </label>
 
@@ -122,6 +127,7 @@ function Modal({ close }) {
                   value={select}
                   onChange={selectOption}
                   name="select"
+                  title="Выберите желаемое направление"
                 >
                   {variables.map((o) => (
                     <option
@@ -136,6 +142,12 @@ function Modal({ close }) {
                   ))}
                 </select>
               </label>
+
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                size="invisible"
+                sitekey="6Ld0AD8fAAAAAOv1BeQHjD4aafgPCtvJ277blMGV"
+              />
 
               <Button
                 className={s.modalBtn}

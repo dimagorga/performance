@@ -37,6 +37,16 @@
   display: none;
 }
 
+.control-arrow:hover {
+  transform: scale(2) !important;
+}
+
+.carousel .control-arrow,
+.carousel.carousel-slider .control-arrow {
+  opacity: 0 !important;
+  background-color: black;
+}
+
 @media screen and (min-width: 768px) {
   .slider {
     min-width: 700px;
@@ -81,7 +91,7 @@
 
 @media screen and (min-width: 1024px) {
   .slider {
-    min-width: 1000px;
+    min-width: 1200px;
     max-width: 1180px;
     /* padding: 15px; */
   }
@@ -90,15 +100,12 @@
     width: 400px;
     margin: 0 auto;
   } */
-  .descrMobile {
-    display: none;
-  }
 
   .descr {
-    min-width: 500px;
-    max-width: 600px;
+    min-width: 560px;
+    max-width: 700px;
     display: block;
     padding: 5px;
-    font-size: 16px;
+    font-size: 17px;
   }
 }

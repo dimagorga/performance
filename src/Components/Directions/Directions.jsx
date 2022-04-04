@@ -1,4 +1,4 @@
-import Info from "@material-ui/icons/Info";
+// import Info from "@material-ui/icons/Info";
 import s from "./Directions.module.css";
 import Button from "../Button/Button";
 

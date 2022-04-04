@@ -11,3 +11,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@media screen and (min-width: 320px) {
+  .carousel .control-arrow,
+  .carousel.carousel-slider .control-arrow {
+    background-color: black;
+  }
+
+  .carousel .control-arrow,
+  .carousel.carousel-slider .control-arrow:hover {
+    background: none !important;
+  }
+  .carousel .control-arrow:before,
+  .carousel.carousel-slider .control-arrow:before {
+    margin: 0 -20px !important;
+  }
+
+  .carousel .slide img {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 678px) {
+  .carousel .slide img {
+    width: 100%;
+  }
+}
