@@ -33,10 +33,10 @@ export default function Footer() {
             <li className={s.item}>
               <a
                 className={s.mobileListLink}
-                href="mailto:performance_brest@gmail.com"
+                href="mailto:performance.brest@gmail.com"
               >
                 <Mail fontSize="inherit" className={s.callIcon} />
-                performance_brest@gmail.com
+                performance.brest@gmail.com
               </a>
             </li>
           </ul>

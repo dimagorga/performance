@@ -1,0 +1,116 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1200;
+  overflow-y: scroll;
+}
+
+.wrapper {
+  position: relative;
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.closeBtn {
+  position: absolute;
+  display: block;
+  right: 5px;
+  top: 3px;
+  transition: all 250ms;
+  padding: 7px;
+  background-color: transparent;
+  border: none;
+}
+
+.closeBtnIcon {
+  fill: black;
+}
+
+.closeBtn:hover .closeBtnIcon {
+  fill: #fcca21;
+}
+
+.closeBtnIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.image {
+  margin: 0 auto;
+  width: 200px;
+  object-fit: cover;
+}
+
+.descr {
+  width: 280px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+}
+
+.title {
+  margin: 0 auto;
+}
+
+.position {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    display: flex;
+  }
+
+  .cardInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+  }
+
+  .image {
+    width: 340px;
+    margin-right: 20px;
+  }
+  .position {
+    margin-bottom: 20px;
+  }
+
+  .descr {
+    width: 300px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cardInfo {
+    width: auto;
+  }
+
+  .image {
+    width: 400px;
+    margin-right: 20px;
+  }
+  .position {
+    margin-bottom: 20px;
+  }
+
+  .descr {
+    width: 500px;
+    font-size: 15px;
+  }
+}

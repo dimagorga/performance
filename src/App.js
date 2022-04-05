@@ -15,6 +15,7 @@ import Footer from "./Components/Footer/Footer";
 import Team from "./Components/Team/Team";
 import SectionTitle from "./Components/SectionTitle/SectionTitle";
 import Price from "./Components/Price/Price";
+// import TeamModal from "./Components/TeamModal/TeamModal";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -74,7 +75,7 @@ function App() {
         <SectionTitle title="Образовательные направления" />
         <Directions onBtnClick={onModalOpen} data={info.edDirections} />
 
-        <Team>
+        <Team onBtnClick={onModalOpen}>
           <SectionTitle title="Преподаватели" />
         </Team>
 

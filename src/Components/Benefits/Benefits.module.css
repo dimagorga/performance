@@ -15,7 +15,8 @@
 
 @media screen and (min-width: 1024px) {
   .wrapper {
-    width: 260px;
+    min-width: 220px;
+    max-width: 260px;
   }
   .name {
     font-size: 16px;

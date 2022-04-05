@@ -22,14 +22,17 @@
   position: absolute;
   display: block;
   right: 5px;
-  top: 5px;
+  top: 3px;
   transition: all 250ms;
   padding: 7px;
   background-color: transparent;
   border: none;
 }
+.closeBtnIcon {
+  fill: black;
+}
 
-.closeBtn:hover {
+.closeBtn:hover .closeBtnIcon {
   fill: #fcca21;
 }
 

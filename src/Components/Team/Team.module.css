@@ -12,13 +12,17 @@
   padding: 5px;
 }
 
+.card {
+  padding-bottom: 20px;
+}
+
 .image {
   display: block;
   width: 240px;
   margin: 0 auto;
 }
 .position {
-  font-size: 16px;
+  font-size: 14px;
   padding: 5px;
 }
 .descrMobile {
@@ -31,11 +35,12 @@
   border: none;
   background-color: #fff;
   color: #fcca21;
+  cursor: pointer;
 }
 
-.descr {
+/* .descr {
   display: none;
-}
+} */
 
 .control-arrow:hover {
   transform: scale(2) !important;
@@ -48,24 +53,27 @@
 }
 
 @media screen and (min-width: 768px) {
-  .slider {
-    min-width: 700px;
-    max-width: 720px;
-  }
-
   .title {
-    font-size: 22px;
+    font-size: 18px;
     padding: 5px;
   }
 
   .card {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .cardList {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 15px;
   }
 
   .image {
     display: block;
-    width: 300px;
-    height: 400px;
+    width: 250px;
+    /* height: 400px; */
     object-fit: contain;
     margin: 0 auto;
   }
@@ -79,13 +87,12 @@
     display: none;
   }
   .descr {
-    min-width: 300px;
-    max-width: 360px;
-    margin: 0px 20px;
+    width: 240px;
+    /* margin: 0px 20px; */
     display: block;
     padding: 5px;
     font-size: 12px;
-    text-align: left;
+    /* text-align: left; */
   }
 }
 
@@ -95,6 +102,9 @@
     max-width: 1180px;
     /* padding: 15px; */
   }
+  .cardList {
+    max-width: 1180px;
+  }
 
   /* .image {
     width: 400px;
@@ -102,10 +112,8 @@
   } */
 
   .descr {
-    min-width: 560px;
-    max-width: 700px;
     display: block;
     padding: 5px;
-    font-size: 17px;
+    font-size: 13px;
   }
 }

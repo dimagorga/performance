@@ -89,7 +89,7 @@ function Modal({ close }) {
     <div className={s.backdrop} onClick={handleCloseModal}>
       {!loader ? (
         <div className={s.wrapper}>
-          <button className={s.closeBtn} onClick={handleCloseModal}>
+          <button className={s.closeBtn} onClick={close}>
             <Close className={s.closeBtnIcon} />
           </button>
           {!sendSuccess && (
