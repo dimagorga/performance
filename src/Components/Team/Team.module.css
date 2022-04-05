@@ -32,10 +32,22 @@
 .showMoreBtn {
   display: block;
   margin: 0 auto;
-  border: none;
+  box-sizing: border-box;
+  margin-top: 5px;
+  padding: 5px;
+  border: 1px solid black;
+  background-color: #fcca21;
+  color: black;
+
+  cursor: pointer;
+  transition: all 250ms;
+}
+
+.showMoreBtn:hover {
   background-color: #fff;
   color: #fcca21;
-  cursor: pointer;
+
+  border: 1px solid black;
 }
 
 /* .descr {

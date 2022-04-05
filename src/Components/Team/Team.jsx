@@ -67,17 +67,16 @@ export default function Team({ children, onBtnClick }) {
                     {!showMore ? "Читать далее" : "Скрыть"}
                   </button>
                 </p> */}
-                <p className={s.descr}>
+                {/* <p className={s.descr}>
                   {!showMore ? member.descr.slice(0, 40) + "..." : member.descr}
-
-                  <button
-                    id={member.id}
-                    onClick={onTeamModalOpen}
-                    className={s.showMoreBtn}
-                  >
-                    Узнать подробнее
-                  </button>
-                </p>
+                </p> */}
+                <button
+                  id={member.id}
+                  onClick={onTeamModalOpen}
+                  className={s.showMoreBtn}
+                >
+                  Узнать подробнее
+                </button>
               </div>
             </li>
           );
