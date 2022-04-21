@@ -6,7 +6,6 @@ import { useState } from "react";
 import TeamModal from "../TeamModal/TeamModal";
 
 export default function Team({ children, onBtnClick }) {
-  const [showMore] = useState(false);
   const [teamModal, setTeamModal] = useState(false);
   const [memberId, setMemberId] = useState(1);
 

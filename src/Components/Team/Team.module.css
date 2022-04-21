@@ -23,7 +23,7 @@
 }
 .position {
   font-size: 14px;
-  padding: 5px;
+  padding-bottom: 5px;
 }
 .descrMobile {
   padding: 5px;
@@ -34,11 +34,11 @@
   margin: 0 auto;
   box-sizing: border-box;
   margin-top: 5px;
-  padding: 5px;
+  padding: 7px;
   border: 1px solid black;
   background-color: #fcca21;
   color: black;
-
+  border-radius: 15px;
   cursor: pointer;
   transition: all 250ms;
 }
@@ -67,11 +67,11 @@
 @media screen and (min-width: 768px) {
   .title {
     font-size: 18px;
-    padding: 5px;
+    padding: 10px 0 5px 0;
   }
 
   .card {
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 10px;
   }
   .cardList {
@@ -116,6 +116,9 @@
   }
   .cardList {
     max-width: 1180px;
+  }
+  .card {
+    padding: 22px;
   }
 
   /* .image {

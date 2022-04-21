@@ -21,8 +21,8 @@
 .closeBtn {
   position: absolute;
   display: block;
-  right: 5px;
-  top: 3px;
+  right: -1px;
+  top: -1px;
   transition: all 250ms;
   padding: 7px;
   background-color: transparent;
